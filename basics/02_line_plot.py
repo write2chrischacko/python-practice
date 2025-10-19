@@ -3,10 +3,13 @@ import numpy as np
 
 x = np.linspace(0, 10, 100)
 y = np.sin(x)
+z = np.cos(x)
 
 plt.plot(x, y, linestyle='-')       # OG sine wave
 plt.plot(x, y*0.5, linestyle='--')  # Shifter sine wave
-plt.legend(["Sine", "Sine (dashed)"], loc="upper right")
+plt.plot(x, z, linestyle='-.')      # Cos wave
+
+plt.legend(["Sine", "Sine (dashed)", "Cosine (dash-dot)"], loc="upper right")
 
 plt.title("Sine Wave")
 plt.xlabel("Time")
